@@ -52,6 +52,8 @@ pub(crate) fn get_wrapped_mint_signer_seeds<'a>(
 }
 
 /// Derive the SPL Token wrapped mint address associated with an unwrapped mint
+///
+/// This function generates a deterministic address for the wrapped version of an existing mint.
 pub fn get_wrapped_mint_address(
     unwrapped_mint: &Pubkey,
     wrapped_token_program_id: &Pubkey,
