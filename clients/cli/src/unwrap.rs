@@ -26,7 +26,7 @@ use {
     solana_signature::Signature,
     solana_signer::Signer,
     solana_transaction::Transaction,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority,
         instruction::unwrap,
     },
@@ -219,7 +219,7 @@ pub async fn command_unwrap(
         .collect::<Vec<Pubkey>>();
 
     let instruction = unwrap(
-        &spl_token_wrap::id(),
+        &grod220_token_wrap::id(),
         &escrow_account,
         &args.unwrapped_token_recipient,
         &wrapped_mint_authority_address,

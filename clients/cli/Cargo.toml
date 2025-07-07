@@ -1,5 +1,5 @@
 [package]
-name = "spl-token-wrap-cli"
+name = "grod220-token-wrap-cli"
 version = "1.0.0"
 description = "Solana Program Library Token Wrap command-line utility"
 authors = { workspace = true }
@@ -32,7 +32,7 @@ solana-system-interface = { workspace = true }
 solana-transaction = { workspace = true }
 spl-associated-token-account-client = { workspace = true }
 spl-token = { workspace = true }
-spl-token-wrap = { workspace = true }
+grod220-token-wrap = { workspace = true }
 spl-token-2022 = { workspace = true }
 tokio = { workspace = true }
 
@@ -46,5 +46,5 @@ solana-test-validator = { workspace = true }
 tempfile = { workspace = true }
 
 [[bin]]
-name = "spl-token-wrap"
+name = "grod220-token-wrap"
 path = "src/main.rs"

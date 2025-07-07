@@ -17,7 +17,7 @@ use {
     solana_signer::Signer,
     solana_transaction::Transaction,
     spl_associated_token_account_client::instruction::create_associated_token_account,
-    spl_token_wrap::{get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority},
+    grod220_token_wrap::{get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority},
     std::fmt::{Display, Formatter},
 };
 

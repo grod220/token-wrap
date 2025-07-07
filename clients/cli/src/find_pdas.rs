@@ -10,7 +10,7 @@ use {
     serde_with::{serde_as, DisplayFromStr},
     solana_cli_output::{display::writeln_name_value, QuietDisplay, VerboseDisplay},
     solana_pubkey::Pubkey,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority,
         get_wrapped_mint_backpointer_address,
     },

@@ -15,7 +15,7 @@ use {
     solana_signature::Signature,
     solana_system_interface::instruction::transfer,
     solana_transaction::Transaction,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_wrapped_mint_address, get_wrapped_mint_backpointer_address, id,
         instruction::create_mint,
     },
@@ -147,7 +147,7 @@ pub async fn command_create_mint(config: &Config, args: CreateMintArgs) -> Comma
 
     let backpointer_rent = rpc_client
         .get_minimum_balance_for_rent_exemption(std::mem::size_of::<
-            spl_token_wrap::state::Backpointer,
+            grod220_token_wrap::state::Backpointer,
         >())
         .await?;
 
