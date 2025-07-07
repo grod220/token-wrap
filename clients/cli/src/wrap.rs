@@ -27,7 +27,7 @@ use {
     solana_signer::Signer,
     solana_transaction::Transaction,
     spl_associated_token_account_client::address::get_associated_token_address_with_program_id,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority, instruction::wrap,
     },
     std::{
@@ -263,7 +263,7 @@ pub async fn command_wrap(
     );
 
     let instruction = wrap(
-        &spl_token_wrap::id(),
+        &grod220_token_wrap::id(),
         &recipient_token_account,
         &wrapped_mint_address,
         &wrapped_mint_authority,

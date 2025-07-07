@@ -13,7 +13,7 @@ use {
     solana_signature::Signature,
     solana_signer::Signer,
     solana_transaction::Transaction,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority,
         instruction::close_stuck_escrow,
     },
@@ -106,7 +106,7 @@ pub async fn command_close_stuck_escrow(
     }
 
     let instruction = close_stuck_escrow(
-        &spl_token_wrap::id(),
+        &grod220_token_wrap::id(),
         &escrow_account,
         &args.destination,
         &args.unwrapped_mint,

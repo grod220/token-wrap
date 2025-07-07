@@ -2179,6 +2179,78 @@ dependencies = [
 ]
 
 [[package]]
+name = "grod220-token-wrap"
+version = "1.0.0"
+dependencies = [
+ "bytemuck",
+ "mollusk-svm",
+ "mollusk-svm-programs-token",
+ "num-derive",
+ "num-traits",
+ "solana-account",
+ "solana-account-info",
+ "solana-cpi",
+ "solana-instruction",
+ "solana-msg",
+ "solana-program-entrypoint",
+ "solana-program-error",
+ "solana-program-option",
+ "solana-program-pack",
+ "solana-pubkey",
+ "solana-rent",
+ "solana-system-interface",
+ "solana-sysvar",
+ "spl-associated-token-account-client",
+ "spl-pod",
+ "spl-tlv-account-resolution",
+ "spl-token",
+ "spl-token-2022 9.0.0",
+ "spl-transfer-hook-interface",
+ "test-case",
+ "test-transfer-hook",
+ "thiserror 2.0.12",
+]
+
+[[package]]
+name = "grod220-token-wrap-cli"
+version = "1.0.0"
+dependencies = [
+ "anyhow",
+ "bytemuck",
+ "clap 3.2.25",
+ "grod220-token-wrap",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "serde_with",
+ "serial_test",
+ "solana-clap-v3-utils",
+ "solana-cli-config",
+ "solana-cli-output",
+ "solana-client",
+ "solana-commitment-config",
+ "solana-hash",
+ "solana-instruction",
+ "solana-keypair",
+ "solana-logger",
+ "solana-presigner",
+ "solana-program-pack",
+ "solana-pubkey",
+ "solana-remote-wallet",
+ "solana-sdk-ids",
+ "solana-signature",
+ "solana-signer",
+ "solana-system-interface",
+ "solana-test-validator",
+ "solana-transaction",
+ "spl-associated-token-account-client",
+ "spl-token",
+ "spl-token-2022 9.0.0",
+ "tempfile",
+ "tokio",
+]
+
+[[package]]
 name = "h2"
 version = "0.3.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -9716,78 +9788,6 @@ dependencies = [
  "spl-pod",
  "spl-type-length-value",
  "thiserror 2.0.12",
-]
-
-[[package]]
-name = "spl-token-wrap"
-version = "1.0.0"
-dependencies = [
- "bytemuck",
- "mollusk-svm",
- "mollusk-svm-programs-token",
- "num-derive",
- "num-traits",
- "solana-account",
- "solana-account-info",
- "solana-cpi",
- "solana-instruction",
- "solana-msg",
- "solana-program-entrypoint",
- "solana-program-error",
- "solana-program-option",
- "solana-program-pack",
- "solana-pubkey",
- "solana-rent",
- "solana-system-interface",
- "solana-sysvar",
- "spl-associated-token-account-client",
- "spl-pod",
- "spl-tlv-account-resolution",
- "spl-token",
- "spl-token-2022 9.0.0",
- "spl-transfer-hook-interface",
- "test-case",
- "test-transfer-hook",
- "thiserror 2.0.12",
-]
-
-[[package]]
-name = "spl-token-wrap-cli"
-version = "1.0.0"
-dependencies = [
- "anyhow",
- "bytemuck",
- "clap 3.2.25",
- "serde",
- "serde_derive",
- "serde_json",
- "serde_with",
- "serial_test",
- "solana-clap-v3-utils",
- "solana-cli-config",
- "solana-cli-output",
- "solana-client",
- "solana-commitment-config",
- "solana-hash",
- "solana-instruction",
- "solana-keypair",
- "solana-logger",
- "solana-presigner",
- "solana-program-pack",
- "solana-pubkey",
- "solana-remote-wallet",
- "solana-sdk-ids",
- "solana-signature",
- "solana-signer",
- "solana-system-interface",
- "solana-test-validator",
- "solana-transaction",
- "spl-associated-token-account-client",
- "spl-token",
- "spl-token-2022 9.0.0",
- "spl-token-wrap",
- "tempfile",
- "tokio",
 ]
 
 [[package]]
