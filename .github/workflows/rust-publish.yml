@@ -57,10 +57,15 @@ jobs:
         with:
           cargo-cache-key: cargo-semver
 
-      - name: Install cargo-audit
+      - name: Install cargo-semver-checks
         uses: taiki-e/install-action@v2
         with:
           tool: cargo-semver-checks
+
+      - name: Install cargo-release
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-release
 
       - name: Set Git Author (required for cargo-release)
         run: |
