@@ -9,6 +9,9 @@ use {
         CommandResult,
     },
     clap::Args,
+    grod220_token_wrap::{
+        get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority,
+    },
     serde_derive::{Deserialize, Serialize},
     serde_with::{serde_as, DisplayFromStr},
     solana_cli_output::{display::writeln_name_value, QuietDisplay, VerboseDisplay},
@@ -17,7 +20,6 @@ use {
     solana_signer::Signer,
     solana_transaction::Transaction,
     spl_associated_token_account_client::instruction::create_associated_token_account,
-    grod220_token_wrap::{get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority},
     std::fmt::{Display, Formatter},
 };
 

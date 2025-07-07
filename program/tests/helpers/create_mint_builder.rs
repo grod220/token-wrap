@@ -3,12 +3,12 @@ use {
         common::{init_mollusk, KeyedAccount, TokenProgram},
         mint_builder::MintBuilder,
     },
-    mollusk_svm::{program::keyed_account_for_system_program, result::Check, Mollusk},
-    solana_account::Account,
-    solana_pubkey::Pubkey,
     grod220_token_wrap::{
         get_wrapped_mint_address, get_wrapped_mint_backpointer_address, instruction::create_mint,
     },
+    mollusk_svm::{program::keyed_account_for_system_program, result::Check, Mollusk},
+    solana_account::Account,
+    solana_pubkey::Pubkey,
 };
 
 pub struct CreateMintResult {

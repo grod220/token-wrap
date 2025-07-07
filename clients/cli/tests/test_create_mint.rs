@@ -4,7 +4,7 @@ use {
     solana_program_pack::Pack,
     spl_token::{self, state::Mint as SplTokenMint},
     spl_token_2022::state::Mint as SplToken2022Mint,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         self, get_wrapped_mint_address, get_wrapped_mint_backpointer_address, state::Backpointer,
     },
 };
@@ -39,7 +39,7 @@ async fn test_create_mint() {
 
     // Verify owners
     assert_eq!(wrapped_mint_account.owner, wrapped_token_program);
-    assert_eq!(backpointer_account.owner, spl_token_wrap::id());
+    assert_eq!(backpointer_account.owner, grod220_token_wrap::id());
 
     // Verify mint properties
     let unwrapped_mint_account = env.rpc_client.get_account(&unwrapped_mint).await.unwrap();

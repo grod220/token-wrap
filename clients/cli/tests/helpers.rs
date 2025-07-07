@@ -36,9 +36,9 @@ pub async fn start_validator() -> (TestValidator, Keypair) {
     let mut test_validator_genesis = TestValidatorGenesis::default();
 
     test_validator_genesis.add_upgradeable_programs_with_path(&[UpgradeableProgramInfo {
-        program_id: spl_token_wrap::id(),
+        program_id: grod220_token_wrap::id(),
         loader: bpf_loader_upgradeable::id(),
-        program_path: PathBuf::from("../../target/deploy/spl_token_wrap.so"),
+        program_path: PathBuf::from("../../target/deploy/grod220_token_wrap.so"),
         upgrade_authority: Pubkey::default(),
     }]);
 

@@ -10,7 +10,7 @@ use {
     solana_signer::Signer,
     spl_token::{self},
     spl_token_2022::{extension::PodStateWithExtensions, pod::PodAccount},
-    spl_token_wrap::{get_wrapped_mint_address, get_wrapped_mint_authority},
+    grod220_token_wrap::{get_wrapped_mint_address, get_wrapped_mint_authority},
     std::process::Command,
     tempfile::NamedTempFile,
 };

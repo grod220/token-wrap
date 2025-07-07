@@ -6,6 +6,10 @@ use {
         mint_builder::MintBuilder,
         token_account_builder::TokenAccountBuilder,
     },
+    grod220_token_wrap::{
+        error::TokenWrapError, get_escrow_address, get_wrapped_mint_address,
+        get_wrapped_mint_authority, get_wrapped_mint_backpointer_address, state::Backpointer,
+    },
     mollusk_svm::{program::keyed_account_for_system_program, result::Check},
     mollusk_svm_programs_token::token2022,
     solana_account::Account,
@@ -28,10 +32,6 @@ use {
         instruction::initialize_mint2,
         pod::PodAccount,
         state::{AccountState, Mint},
-    },
-    grod220_token_wrap::{
-        error::TokenWrapError, get_escrow_address, get_wrapped_mint_address,
-        get_wrapped_mint_authority, get_wrapped_mint_backpointer_address, state::Backpointer,
     },
 };
 

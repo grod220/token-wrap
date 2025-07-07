@@ -13,7 +13,7 @@ use {
         pod::PodAccount,
         {self},
     },
-    spl_token_wrap::{get_wrapped_mint_address, get_wrapped_mint_authority},
+    grod220_token_wrap::{get_wrapped_mint_address, get_wrapped_mint_authority},
     std::{process::Command, str::FromStr},
     tempfile::NamedTempFile,
 };
@@ -232,7 +232,7 @@ async fn test_create_escrow_account_signer_idempotent() {
         .unwrap();
     assert!(!output.status.success());
     let stderr = String::from_utf8(output.stderr).unwrap();
-    let derived_escrow_address = spl_token_wrap::get_escrow_address(
+    let derived_escrow_address = grod220_token_wrap::get_escrow_address(
         &unwrapped_mint,
         &unwrapped_token_program_id,
         &wrapped_token_program_id,

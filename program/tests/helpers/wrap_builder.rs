@@ -4,14 +4,14 @@ use {
         mint_builder::MintBuilder,
         token_account_builder::TokenAccountBuilder,
     },
+    grod220_token_wrap::{
+        get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority, instruction::wrap,
+    },
     mollusk_svm::{result::Check, Mollusk},
     solana_account::Account,
     solana_instruction::AccountMeta,
     solana_pubkey::Pubkey,
     spl_token_2022::extension::ExtensionType::ImmutableOwner,
-    grod220_token_wrap::{
-        get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority, instruction::wrap,
-    },
 };
 
 pub struct WrapBuilder<'a> {

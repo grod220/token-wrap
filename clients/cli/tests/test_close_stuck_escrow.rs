@@ -13,7 +13,7 @@ use {
         instruction::{initialize_mint2, initialize_mint_close_authority},
         pod::PodMint,
     },
-    spl_token_wrap::{get_wrapped_mint_address, get_wrapped_mint_authority},
+    grod220_token_wrap::{get_wrapped_mint_address, get_wrapped_mint_authority},
     std::process::Command,
 };
 

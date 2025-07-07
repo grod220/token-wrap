@@ -3,15 +3,15 @@ use {
         common::{init_mollusk, KeyedAccount, TokenProgram},
         mint_builder::MintBuilder,
     },
+    grod220_token_wrap::{
+        get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority, instruction,
+    },
     mollusk_svm::{result::Check, Mollusk},
     mollusk_svm_programs_token::token2022,
     solana_account::Account,
     solana_program_pack::Pack,
     solana_pubkey::Pubkey,
     solana_rent::Rent,
-    grod220_token_wrap::{
-        get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority, instruction,
-    },
 };
 
 pub struct CloseStuckEscrowBuilder<'a> {

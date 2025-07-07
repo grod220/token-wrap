@@ -4,6 +4,10 @@ use {
         mint_builder::MintBuilder,
         token_account_builder::TokenAccountBuilder,
     },
+    grod220_token_wrap::{
+        get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority,
+        instruction::unwrap,
+    },
     mollusk_svm::{result::Check, Mollusk},
     solana_account::Account,
     solana_instruction::AccountMeta,
@@ -16,10 +20,6 @@ use {
             PodStateWithExtensions,
         },
         pod::PodMint,
-    },
-    grod220_token_wrap::{
-        get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority,
-        instruction::unwrap,
     },
 };
 
