@@ -3,6 +3,7 @@ use {
         create_associated_token_account, create_unwrapped_mint, execute_create_mint,
         setup_test_env, TOKEN_WRAP_CLI_BIN,
     },
+    grod220_token_wrap::{get_wrapped_mint_address, get_wrapped_mint_authority},
     serial_test::serial,
     solana_keypair::Keypair,
     solana_signer::Signer,
@@ -13,7 +14,6 @@ use {
         instruction::{initialize_mint2, initialize_mint_close_authority},
         pod::PodMint,
     },
-    grod220_token_wrap::{get_wrapped_mint_address, get_wrapped_mint_authority},
     std::process::Command,
 };
 
