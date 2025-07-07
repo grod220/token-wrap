@@ -55,7 +55,7 @@ pub struct TransferAuthority {
 }
 
 pub fn init_mollusk() -> Mollusk {
-    let mut mollusk = Mollusk::new(&spl_token_wrap::id(), "spl_token_wrap");
+    let mut mollusk = Mollusk::new(&grod220_token_wrap::id(), "grod220_token_wrap");
     mollusk_svm_programs_token::token::add_program(&mut mollusk);
     mollusk_svm_programs_token::token2022::add_program(&mut mollusk);
     mollusk_svm_programs_token::associated_token::add_program(&mut mollusk);

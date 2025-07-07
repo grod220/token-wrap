@@ -17,7 +17,7 @@ use {
         },
         pod::PodMint,
     },
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority,
         instruction::unwrap,
     },
@@ -258,7 +258,7 @@ impl<'a> UnwrapBuilder<'a> {
         });
 
         let mut instruction = unwrap(
-            &spl_token_wrap::id(),
+            &grod220_token_wrap::id(),
             &escrow.key,
             &recipient.key,
             &wrapped_mint_authority,

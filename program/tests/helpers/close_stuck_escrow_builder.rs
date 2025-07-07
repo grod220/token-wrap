@@ -9,7 +9,7 @@ use {
     solana_program_pack::Pack,
     solana_pubkey::Pubkey,
     solana_rent::Rent,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority, instruction,
     },
 };
@@ -144,7 +144,7 @@ impl<'a> CloseStuckEscrowBuilder<'a> {
         });
 
         let instruction = instruction::close_stuck_escrow(
-            &spl_token_wrap::id(),
+            &grod220_token_wrap::id(),
             &escrow_account.key,
             &destination_account.key,
             &unwrapped_mint.key,

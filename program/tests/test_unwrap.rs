@@ -25,7 +25,7 @@ use {
         },
         pod::{PodAccount, PodMint},
     },
-    spl_token_wrap::{
+    grod220_token_wrap::{
         error::TokenWrapError, get_escrow_address, get_wrapped_mint_address,
         get_wrapped_mint_authority,
     },

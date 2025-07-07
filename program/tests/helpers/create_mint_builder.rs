@@ -6,7 +6,7 @@ use {
     mollusk_svm::{program::keyed_account_for_system_program, result::Check, Mollusk},
     solana_account::Account,
     solana_pubkey::Pubkey,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_wrapped_mint_address, get_wrapped_mint_backpointer_address, instruction::create_mint,
     },
 };
@@ -150,7 +150,7 @@ impl<'a> CreateMintBuilder<'a> {
         });
 
         let instruction = create_mint(
-            &spl_token_wrap::id(),
+            &grod220_token_wrap::id(),
             &wrapped_mint_addr,
             &wrapped_backpointer_address,
             &unwrapped_mint_addr,

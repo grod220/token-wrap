@@ -9,7 +9,7 @@ use {
     solana_instruction::AccountMeta,
     solana_pubkey::Pubkey,
     spl_token_2022::extension::ExtensionType::ImmutableOwner,
-    spl_token_wrap::{
+    grod220_token_wrap::{
         get_escrow_address, get_wrapped_mint_address, get_wrapped_mint_authority, instruction::wrap,
     },
 };
@@ -229,7 +229,7 @@ impl<'a> WrapBuilder<'a> {
         ));
 
         let mut instruction = wrap(
-            &spl_token_wrap::id(),
+            &grod220_token_wrap::id(),
             &recipient.key,
             &wrapped_mint.key,
             &wrapped_mint_authority,

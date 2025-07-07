@@ -29,7 +29,7 @@ use {
         pod::PodAccount,
         state::{AccountState, Mint},
     },
-    spl_token_wrap::{
+    grod220_token_wrap::{
         error::TokenWrapError, get_escrow_address, get_wrapped_mint_address,
         get_wrapped_mint_authority, get_wrapped_mint_backpointer_address, state::Backpointer,
     },
@@ -397,8 +397,8 @@ fn test_end_to_end_close_mint_case() {
         &spl_token_2022::id(),
     );
 
-    let create_mint_ix = spl_token_wrap::instruction::create_mint(
-        &spl_token_wrap::id(),
+    let create_mint_ix = grod220_token_wrap::instruction::create_mint(
+        &grod220_token_wrap::id(),
         &wrapped_mint_address,
         &backpointer_address,
         &unwrapped_mint.key,
@@ -453,8 +453,8 @@ fn test_end_to_end_close_mint_case() {
     )
     .unwrap();
 
-    let close_stuck_escrow_ix = spl_token_wrap::instruction::close_stuck_escrow(
-        &spl_token_wrap::id(),
+    let close_stuck_escrow_ix = grod220_token_wrap::instruction::close_stuck_escrow(
+        &grod220_token_wrap::id(),
         &escrow_address,
         &payer,
         &unwrapped_mint_addr,
@@ -486,8 +486,8 @@ fn test_end_to_end_close_mint_case() {
         .build()
         .account;
 
-    let wrap_ix = spl_token_wrap::instruction::wrap(
-        &spl_token_wrap::id(),
+    let wrap_ix = grod220_token_wrap::instruction::wrap(
+        &grod220_token_wrap::id(),
         &recipient_wrapped_addr,
         &wrapped_mint_address,
         &wrapped_mint_authority,

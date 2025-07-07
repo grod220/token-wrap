@@ -29,7 +29,7 @@ use {
         },
         pod::{PodAccount, PodMint},
     },
-    spl_token_wrap::{error::TokenWrapError, get_wrapped_mint_address, get_wrapped_mint_authority},
+    grod220_token_wrap::{error::TokenWrapError, get_wrapped_mint_address, get_wrapped_mint_authority},
 };
 
 pub mod helpers;
@@ -148,7 +148,7 @@ fn test_wrap_with_uninitialized_escrow() {
 }
 
 #[test]
-fn test_successful_spl_token_wrap() {
+fn test_successful_grod220_token_wrap() {
     let starting_amount = 50_000;
     let wrap_amount = 12_555;
 
@@ -163,7 +163,7 @@ fn test_successful_spl_token_wrap() {
 }
 
 #[test]
-fn test_successful_spl_token_2022_to_spl_token_wrap() {
+fn test_successful_spl_token_2022_to_grod220_token_wrap() {
     let starting_amount = 64_532;
     let wrap_amount = 7_543;
 

@@ -1,4 +1,4 @@
-use spl_token_wrap::instruction::TokenWrapInstruction;
+use grod220_token_wrap::instruction::TokenWrapInstruction;
 
 #[test]
 fn test_pack_unpack_create_mint() {

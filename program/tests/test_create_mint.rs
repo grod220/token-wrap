@@ -18,7 +18,7 @@ use {
         pod::{PodCOption, PodMint},
         state::Mint,
     },
-    spl_token_wrap::{
+    grod220_token_wrap::{
         error::TokenWrapError, get_wrapped_mint_address, get_wrapped_mint_authority,
         state::Backpointer,
     },
@@ -56,7 +56,7 @@ fn test_idempotency_true_with_existing_valid_account() {
         ..Account::default()
     };
     let backpointer_account_with_data = Account {
-        owner: spl_token_wrap::id(),
+        owner: grod220_token_wrap::id(),
         ..Account::default()
     };
 
@@ -219,7 +219,7 @@ fn test_successful_spl_token_to_spl_token_2022() {
 
     assert_eq!(
         result.wrapped_backpointer.account.owner,
-        spl_token_wrap::id()
+        grod220_token_wrap::id()
     );
     let backpointer =
         bytemuck::from_bytes::<Backpointer>(&result.wrapped_backpointer.account.data[..]);
@@ -271,7 +271,7 @@ fn test_successful_spl_token_2022_to_spl_token() {
 
     assert_eq!(
         result.wrapped_backpointer.account.owner,
-        spl_token_wrap::id()
+        grod220_token_wrap::id()
     );
 
     let backpointer =
@@ -317,7 +317,7 @@ fn test_create_mint_from_extended_mint(extension: MintExtension) {
 
     assert_eq!(
         result.wrapped_backpointer.account.owner,
-        spl_token_wrap::id()
+        grod220_token_wrap::id()
     );
     let backpointer =
         bytemuck::from_bytes::<Backpointer>(&result.wrapped_backpointer.account.data[..]);
