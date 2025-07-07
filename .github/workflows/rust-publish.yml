@@ -74,6 +74,7 @@ jobs:
           cargo release $LEVEL --manifest-path "${{ inputs.package_path }}/Cargo.toml" --no-tag --no-publish --no-push --no-confirm --execute
 
       - name: Check semver
+        if: ${{ inputs.package_path != 'clients/cli' }}
         run: pnpm rust:semver --manifest-path "${{ inputs.package_path }}/Cargo.toml"
 
   publish:
