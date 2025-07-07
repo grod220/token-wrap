@@ -2180,7 +2180,7 @@ dependencies = [
 
 [[package]]
 name = "grod220-token-wrap"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "bytemuck",
  "mollusk-svm",
@@ -2213,7 +2213,7 @@ dependencies = [
 
 [[package]]
 name = "grod220-token-wrap-cli"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "anyhow",
  "bytemuck",
