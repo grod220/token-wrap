@@ -1,3 +1,4 @@
+// CLI modules for token wrap functionality
 mod cli;
 mod close_stuck_escrow;
 mod common;
