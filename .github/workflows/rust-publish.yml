@@ -56,16 +56,8 @@ jobs:
         uses: ./.github/actions/setup
         with:
           cargo-cache-key: cargo-semver
-
-      - name: Install cargo-semver-checks
-        uses: taiki-e/install-action@v2
-        with:
-          tool: cargo-semver-checks
-
-      - name: Install cargo-release
-        uses: taiki-e/install-action@v2
-        with:
-          tool: cargo-release
+          cargo-release: true
+          cargo-semver-checks: true
 
       - name: Set Git Author (required for cargo-release)
         run: |
@@ -103,11 +95,7 @@ jobs:
           cli: true
           cargo-cache-key: cargo-publish-${{ inputs.package_path }}
           cargo-cache-fallback-key: cargo-publish
-
-      - name: Install cargo-release
-        uses: taiki-e/install-action@v2
-        with:
-          tool: cargo-release
+          cargo-release: true
 
       - name: Ensure CARGO_REGISTRY_TOKEN variable is set
         env:
